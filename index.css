@@ -1,0 +1,49 @@
+body{
+    background: peachpuff;
+}
+.portfolio{
+    margin: auto;
+    width: 50%;
+    border: 3px blue;
+    border-radius: 17px;
+    padding: 10px;
+    background: white;
+    text-align: center;
+}
+img{
+    border-radius: 16px;
+}
+@media only screen and (max-width:768px) {
+    .portfolio{
+        padding: 90px;
+    }
+    .portfolio h2{
+         font-size: 1.5rem;
+    } 
+}
+@media (max-width: 500px) {
+   .portfolio{
+    width: 100%;
+    margin: 0 0 0 0;
+
+    padding: 10px;
+   } 
+   .portfolio h2{
+    font-size: 0.5rem;
+    
+} 
+.portfolio .header{
+    font-size: 1.5rem;
+}
+.portfolio-text h2{
+    font-size: 1.1rem;
+}
+@media (max-width: 1200px){
+    .portfolio{
+        padding: 50px;
+        margin-bottom: 50px;
+    }
+}
+}
+
+    

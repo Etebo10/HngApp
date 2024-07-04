@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hng.css">
+</head>
+
+<body>
+    <div class="portfolio">
+        <img src="C:\Users\HP\Desktop\my codes.com\projects2\src\portfolio-form\HNG portfolio\gideon.jpg" alt="" data-testid="slackProfilePicture">
+        <div class="portfolio-text">
+            <h2>Name</h2>
+            
+                <p data-testid="slackDisplayName">Ogunleti Gideon Ayomide</p>
+            
+            <h2>Email</h2>
+            
+                <p data-testid="slackEmail">Ogunletigideon10@gmail.com</p>
+            
+            <div class="portfolio-time">
+                <h2>Current day of the week:</h2>
+                <p  id="current-day" data-testid="currentDay">
+                    <p></p>
+                </p>
+                <h2>Time in UTC:</h2>
+                <p  id="utc-time" data-testid="currentTimeUTC"></p>
+                <p></p></a><br>
+                <h2 class="header">Goals to achieve in the next two years</h2>
+                <p>
+                <h3>1. Stay Up to date with industry trends:</h3> Keep learning about new
+                frameworks and tools to be up ahead in the field.
+                </p>
+                <p>
+                <h3>2. Enhance Accessibilty:</h3> Ensure that my applications are accessible
+                to users and follow accessibilty guudelines.
+                </p>
+                <p>
+                <h3> 3. Improve user experience with interactive elements</h3>
+                </p>
+                <p>
+                <h3>4. Build responsive and user friendly web-apps:</h3> Develop
+                web-apps that are visually appealing and provide seamless user experience
+                </p>
+                <footer>
+                    <p>Task by; <a href="https://hng.tech/learn" data-testid="hngLink">HNG</a></p> Developed by <p data-testid="slackDisplayName">Gideon</p>
+                    <p>Other links <a href="https://keyword.dog/" data-testid="keywordLink">Keyword</a> &nbsp;&nbsp;<a href="https://scrapeanyweb.site/" data-testid="scrapeanywebLink">Web scraper</a></p>
+                </footer>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+
+    // const date = new Date().getCurrentUTCTime();
+    function padZero(value) {
+        return value < 10 ? '0' + value : value;
+    }
+
+    function getCurrentUTCTime() {
+        const now = new Date();
+        now.setHours(now.getHours() - 1)
+        const hours = padZero(now.getHours());
+        const minutes = padZero(now.getMinutes());
+        const seconds = padZero(now.getSeconds());
+
+        return `${hours}:${minutes}:${seconds}`
+        
+        // console.log(utcTimeString)
+    }
+   function updateTime() {
+    document.getElementById('utc-time').innerText = getCurrentUTCTime();
+    // console.log(getCurrentUTCTime())
+   }
+
+   updateTime()
+
+// Update the UTC time every second
+setInterval(updateTime, 1000);
+    
+
+    // function getCurrentUTCTime() {
+    //     const date = new Date().getCurrentUTCTime();
+    //     utcTime.innerText = date
+    //     //   utcTimeElement.innerText = utcTime;
+    // }
+
+
+
+
+
+    const currentDayElement = document.getElementById("current-day");
+    const today = new Date();
+    const day = today.toLocaleString("en-US", { weekday: "long" });
+    currentDayElement.textContent = `Today is ${day}`;
+</script>
+
+</html>
